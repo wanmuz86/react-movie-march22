@@ -1,5 +1,5 @@
 import react, { useEffect, useState } from 'react';
-
+import Movie from './Movie';
 
 
 function Main() {
@@ -28,16 +28,16 @@ function Main() {
     }, [])
 
     return (
-        <main>
-            <h1>Main page</h1>
-            <ul>
+        <main className="bg-secondary">
+            <div className="container"> 
+            <div className="row">
             {
             movies.map(val=>{
-                return <li>{val.title}</li>
+                return <Movie movie={val} />
             })
             }
-             </ul>
-
+            </div>
+            </div>
 
         </main>
 
