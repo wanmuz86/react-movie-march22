@@ -27,13 +27,17 @@ function Main() {
 
     }, [])
 
+    const buttonPress = (movie) => {
+        alert(`${movie.title} telah ditekan`);
+    }
+
     return (
         <main className="bg-secondary">
             <div className="container"> 
             <div className="row">
             {
             movies.map(val=>{
-                return <Movie movie={val} />
+                return <Movie movie={val} handleClick={buttonPress} />
             })
             }
             </div>
